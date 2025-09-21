@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>My weather app</title>
+  </head>
+  <body>
+    <div class="weather-app">
+      <header>
+        <form id="search-form" class="search-form" onsubmit="searchCity(event)">
+          <input
+            type="search"
+            placeholder="Enter a city.."
+            required
+            class="search-input"
+          />
+          <input type="submit" value="Search" class="search-button" />
+        </form>
+      </header>
+      <main>
+        <div class="current-weather">
+          <div>
+            <h1 class="current-city">Paris</h1>
+            <p class="current-details">
+              <span id="actualDay">Saturday</span>
+              <span id="actualTime">15:32</span>,
+              <span id="weatherDescription">moderate rain</span><br />
+              Humidity <strong id="humidityValue">87%</strong>, Wind:
+              <strong id="windValue">7.2km/h</strong>
+            </p>
+          </div>
+          <div class="current-temperature">
+            <span id="currentTemperatureIcon">☀️</span
+            ><span id="currentTemperatureValue">24</span
+            ><span id="currentTemperatureUnit">°C</span>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <p>
+          This project was coded by
+          <span class="developer-name">Daniela Moreno</a>
+        </p>
+        <script src="src/index.js"></script>
+      </footer>
+    </div>
+  </body>
+</html>
